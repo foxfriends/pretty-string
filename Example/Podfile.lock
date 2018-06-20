@@ -1,0 +1,22 @@
+PODS:
+  - Nimble (7.0.3)
+  - PrettyString (0.1.0)
+  - Quick (1.2.0)
+
+DEPENDENCIES:
+  - Nimble (~> 7.0.2)
+  - PrettyString (from `../`)
+  - Quick (~> 1.2.0)
+
+EXTERNAL SOURCES:
+  PrettyString:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
+  PrettyString: b956b5d6b0cd9acba3a4dfd3aedc5500a3cddd3e
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+
+PODFILE CHECKSUM: dd0d4147fbf0cc8b36a9f24c39a44299826b8de0
+
+COCOAPODS: 1.4.0
