@@ -32,6 +32,25 @@ class PrettyStringSpec: QuickSpec {
                 expect(prettyString.map { $0.isEqual(to: attributedString) }) == true
             }
 
+            it("should work when used as the string extension") {
+                let attributedString = NSMutableAttributedString()
+                attributedString.append(NSAttributedString(string: "hello this is a "))
+                attributedString.append(NSAttributedString(string: "red string", attributes: [
+                    NSAttributedStringKey.foregroundColor: UIColor.red
+                ]))
+                let config = PrettyString.Config(
+                    base: [],
+                    rules: [
+                        PrettyString.Config.Rule(
+                            name: "red",
+                            attributes: [.foregroundColor(UIColor.red)]
+                        ),
+                    ]
+                )
+                let prettyString = try? "hello this is a {red:red string}".prettify(config)
+                expect(prettyString.map { $0.isEqual(to: attributedString) }) == true
+            }
+
             it("should parse a string with a few attributes") {
                 let attributedString = NSMutableAttributedString()
                 attributedString.append(NSAttributedString(string: "red fish", attributes: [
