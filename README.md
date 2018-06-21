@@ -47,12 +47,16 @@ The `rules` are then a list of `Rule`s. Each rule has a name, such as `blue`, an
 Once you have a string and a `Config`, you are ready to prettify your strings!
 
 ```swift
-let attributedString = string.prettify(config)
+let attributedString = try! string.prettify(config)
 ```
 
 That's it! Now `attributedString` should show something like
 
 >   Hello this is some <span style='color:blue'>blue text</span>
+
+Note that the conversion from `String` to `NSAttributedString` *can* fail, and so you must use `try`
+or one of its variations to handle the error. The error that is thrown is of type
+`PrettyString.Error`, and may provide some hint as to why your string has failed to parse.
 
 If you find yourself always using the same `Config` object, you can even set the default config so
 that calling `prettify` with no arguments will use it automatically. That means, the
@@ -60,7 +64,7 @@ that calling `prettify` with no arguments will use it automatically. That means,
 
 ```swift
 PrettyString.Config.default = config
-let attributedString = string.prettify()
+let attributedString = try! string.prettify()
 ```
 
 ## The attributes
@@ -120,6 +124,17 @@ end of the name. You can even have a rule with `{` or `}` in the name, so long a
 character. I really suggest against doing this though, and just stick to the usual letters,
 underscores, and hyphens since that ends up being the most clear.
 
+### Explicit API
+
+If you prefer not to use the extension to the `String` type, the `PrettyString` struct itself can be
+used directly:
+
+```swift
+let string = "This is some {blue:blue text}"
+let prettyString = PrettyString(string, config)
+let attributedString = try! prettyString.parse()
+```
+
 ## Requirements
 
 This project uses Swift 4, and you should too.
@@ -130,7 +145,7 @@ PrettyString is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'PrettyString', '~> 0.1.0'
+pod 'PrettyString', '~> 0.1'
 ```
 
 ## Author
