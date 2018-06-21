@@ -50,10 +50,6 @@ Once you have a string and a `Config`, you are ready to prettify your strings!
 let attributedString = try! string.prettify(config)
 ```
 
-That's it! Now `attributedString` should show something like
-
->   Hello this is some <span style='color:blue'>blue text</span>
-
 Note that the conversion from `String` to `NSAttributedString` *can* fail, and so you must use `try`
 or one of its variations to handle the error. The error that is thrown is of type
 `PrettyString.Error`, and may provide some hint as to why your string has failed to parse.
@@ -131,7 +127,7 @@ used directly:
 
 ```swift
 let string = "This is some {blue:blue text}"
-let prettyString = PrettyString(string, config)
+let prettyString = PrettyString(string, config: config)
 let attributedString = try! prettyString.parse()
 ```
 
