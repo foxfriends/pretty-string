@@ -200,7 +200,7 @@ class PrettyStringSpec: QuickSpec {
                 expect(try? PrettyString("bold:hello} this is a string", config: config).parse()).to(beNil())
             }
 
-            it("should use the default config with nothign specified") {
+            it("should use the default config with nothing specified") {
                 let attributedString = NSMutableAttributedString()
                 attributedString.append(NSAttributedString(string: "hello this is a "))
                 attributedString.append(NSAttributedString(string: "red string", attributes: [
