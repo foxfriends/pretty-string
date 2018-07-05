@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 extension PrettyString {
+    /// An attribute supported by PrettyString. Each corresponds directly to the same `NSAttributedStringKey`.
+    /// See the `NSAttributedString` documentation for information on each of these attributes.
     public enum Attribute {
 // The commented out keys are unsupported, but left in for completeness.
 //        case accessibilityAlignment

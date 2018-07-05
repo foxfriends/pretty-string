@@ -61,6 +61,11 @@ private func compile(_ attributes: [[PrettyString.Attribute]]) -> [NSAttributedS
 extension PrettyString {
     /// Parses the string using the PrettyString format, generating an attributed string by applying the attributes
     /// defined in the Config
+    ///
+    /// - Parameter string: The string to parse, with PrettyString markup included
+    /// - Parameter config: The config to use to parse this string
+    /// - Throws: A `PrettyString.Error` that describes what went wrong
+    /// - Returns: The attributed string
     public static func parse(_ string: String, config: Config = .default) throws -> NSAttributedString {
         let tokens = try tokenize(string)
 
