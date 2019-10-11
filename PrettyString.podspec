@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'PrettyString'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'NSAttributedString is ugly. PrettyString is pretty.'
 
   s.description      = <<-DESC
