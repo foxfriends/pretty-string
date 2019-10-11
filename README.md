@@ -1,6 +1,6 @@
 # PrettyString
 
-[![CI Status](https://img.shields.io/travis/OinkIguana/PrettyString.svg?style=flat)](https://travis-ci.org/OinkIguana/PrettyString)
+[![CI Status](https://img.shields.io/travis/foxfriends/PrettyString.svg?style=flat)](https://travis-ci.org/foxfriends/PrettyString)
 [![Version](https://img.shields.io/cocoapods/v/PrettyString.svg?style=flat)](https://cocoapods.org/pods/PrettyString)
 [![License](https://img.shields.io/cocoapods/l/PrettyString.svg?style=flat)](https://cocoapods.org/pods/PrettyString)
 [![Platform](https://img.shields.io/cocoapods/p/PrettyString.svg?style=flat)](https://cocoapods.org/pods/PrettyString)
