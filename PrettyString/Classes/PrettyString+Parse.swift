@@ -51,7 +51,7 @@ private func tokenize(_ string: String) throws -> [Token] {
     return tokens
 }
 
-private func compile(_ attributes: [[PrettyString.Attribute]]) -> [NSAttributedStringKey: Any] {
+private func compile(_ attributes: [[PrettyString.Attribute]]) -> [NSAttributedString.Key: Any] {
     return attributes
         .reduce([:], { compiled, set in
             set.reduce(compiled, { $1.apply($0) })
