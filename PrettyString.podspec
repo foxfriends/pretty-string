@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'PrettyString'
-  s.version          = '0.1.3'
+  s.version          = '1.0.0'
   s.summary          = 'NSAttributedString is ugly. PrettyString is pretty.'
 
   s.description      = <<-DESC
@@ -13,7 +13,7 @@ Markdown with a much cleaner syntax than HTML.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Cameron Eldridge' => 'cameldridge+git@gmail.com' }
   s.source           = { :git => 'https://github.com/foxfriends/pretty-string.git', :tag => s.version.to_s }
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.3'
   s.source_files = 'PrettyString/Classes/**/*'
-  s.swift_version = '4.0'
+  s.swift_version = '5.0'
 end
